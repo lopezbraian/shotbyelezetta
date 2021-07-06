@@ -89,14 +89,13 @@ section {
 }
 
 .group-photos__container__item:hover {
-  transform: scale(1.05);
- 
+  transform: scale(1.05); 
 }
 
 .quality-container{
   display: grid;
   grid-template-columns: 400px auto;
-  justify-content: center;
+  justify-content: space-around;
   gap: 5px;
 }
 
@@ -104,13 +103,9 @@ section {
   border-radius: 3px;
 
 }
-.quality-container__right{
-  display: flex;
-  flex-direction: column;
-}
 .quality-container__tecnologias {
   display: flex;
-  justify-content: space-between;
+  flex-direction:column ;
 }
 
 .box-tec {
@@ -121,7 +116,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid gray; */
   border-radius: 3px;
 }
 .box-tec:first-child {
@@ -133,13 +127,6 @@ section {
 .box-tec > p {
   margin: 0;
   text-align: center;
-}
-
-.quality-container__photo > img { 
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 3px;
 }
 
 
