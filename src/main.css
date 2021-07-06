@@ -21,18 +21,30 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.header-menu > li {
+  list-style: none  ;
+}
+.header-menu__item > a {
+  color: white;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
 .header-menu__item {
-  cursor: pointer;
   padding: 10px;
   margin: 5px;
   list-style: none;
-  color: white;
-  font-size: 1.1rem;
   font-weight: 400;
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   transition: 0.3s;
+}
+.header-menu__item__img {
+  transition: .2s;
+  cursor: pointer;
+}
+.header-menu__item__img:hover {
+  filter: invert(1);
 }
 section {
   padding: 10px;
@@ -73,27 +85,47 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 3px;
+  transition: .4s;
 }
 
+.group-photos__container__item:hover {
+  transform: scale(1.05);
+ 
+}
 
 .quality-container{
   display: grid;
   grid-template-columns: 400px auto;
   justify-content: center;
+  gap: 5px;
 }
 
 .quality-container__video > video {
   border-radius: 3px;
 
 }
+.quality-container__right{
+  display: flex;
+  flex-direction: column;
+}
+.quality-container__tecnologias {
+  display: flex;
+  justify-content: space-between;
+}
+
 .box-tec {
   width: 150px;
+  margin-left: 2px;
   height: 150px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* border: 1px solid gray; */
+  border-radius: 3px;
+}
+.box-tec:first-child {
+  margin-left: 0;
 }
 .box-tec > img {
   object-fit: contain;
@@ -101,6 +133,13 @@ section {
 .box-tec > p {
   margin: 0;
   text-align: center;
+}
+
+.quality-container__photo > img { 
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
 }
 
 
@@ -112,6 +151,28 @@ section {
   z-index: 0;
   background-color: black;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-us__footer > ul  {
+  display: flex;
+  justify-content: center;
+}
+.about-us__footer li {
+  margin: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about-us__footer > ul > li > img {
+  width: 40px;
+  height: 40px;
+}
+.about-us__footer > ul > li > a {
+  text-decoration: none;
+  color: white;
 }
 .about-us::before {
   content: "";

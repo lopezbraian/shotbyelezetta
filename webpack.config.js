@@ -9,6 +9,9 @@ module.exports = {
     filename: "bundle.js",
     assetModuleFilename: "images/[hash][ext][query]",
   },
+  devServer: {
+    open: true,
+  },
   module: {
     rules: [
       {

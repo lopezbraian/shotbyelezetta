@@ -16,13 +16,15 @@
     <div class="main">
       <header class="header">
         <ul class="header-menu">
-          <li class="header-menu__item">HOME</li>
-          <li class="header-menu__item">ABOUT</li>
-          <li class="header-menu__item">PORTAFOLIO</li>
-          <li><img src="./assets/images/log.png" alt="logo" /></li>
-          <li class="header-menu__item">BLOG</li>
-          <li class="header-menu__item">CATEGORIAS</li>
-          <li class="header-menu__item">CONTACTO</li>
+          <li class="header-menu__item"><a href="#">HOME</a></li>
+          <li class="header-menu__item"><a href="#">ABOUT</a></li>
+          <li class="header-menu__item"><a href="#">PORTAFOLIO</a></li>
+          <li class="header-menu__item__img">
+            <img src="./assets/images/log.png" alt="logo" />
+          </li>
+          <li class="header-menu__item"><a href="#">BLOG</a></li>
+          <li class="header-menu__item"><a href="#">CATEGORIAS</a></li>
+          <li class="header-menu__item"><a href="#about_us">CONTACTO</a></li>
         </ul>
       </header>
       <section class="group-photos">
@@ -91,49 +93,61 @@
               autoplay
               muted
             ></video>
+            <div class="quality-container__tecnologias">
+              <div class="box-tec">
+                <img
+                  width="100px"
+                  height="100px"
+                  src="./assets/logo/Adobe-Photoshop-Logo.png"
+                  alt=""
+                />
+                <p>Adobe Photoshop</p>
+              </div>
+              <div class="box-tec">
+                <img
+                  width="100px"
+                  height="100px"
+                  src="./assets/logo/illustrator.png"
+                  alt=""
+                />
+                <p>Adobe Illustrator</p>
+              </div>
+              <div class="box-tec">
+                <img
+                  width="100px"
+                  height="100px"
+                  src="./assets/logo/logo-Sony.png"
+                  alt=""
+                />
+                <p>Sony A7 III</p>
+              </div>
+            </div>
           </div>
-          <div class="quality-container__tecnologias">
-            <div class="box-tec">
-              <img
-                width="100px"
-                height="100px"
-                src="./assets/logo/Adobe-Photoshop-Logo.png"
-                alt=""
-              />
-              <p>Adobe Photoshop</p>
-            </div>
-            <div class="box-tec">
-              <img
-                width="100px"
-                height="100px"
-                src="./assets/logo/illustrator.png"
-                alt=""
-              />
-              <p>Adobe Illustrator</p>
-            </div>
-            <div class="box-tec">
-              <img
-                width="100px"
-                height="100px"
-                src="./assets/logo/logo-Sony.png"
-                alt=""
-              />
-              <p>Sony A7 III</p>
-            </div>
+
+          <div class="quality-container__photo">
+              <img src="assets/images/client.jpg" alt="" />
           </div>
         </div>
       </section>
       <section class="about-us">
-        <h2 class="title-section">Sobre Mí</h2>
-        <p class="text-section">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-          esse dolorum illum magnam, velit unde animi. Libero expedita natus
-          voluptatem velit. Quae magnam ut dolorum. Sint unde nobis ullam ab.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-          minus consectetur rem a dolorem vero deleniti repudiandae eaque
-          corrupti perferendis mollitia sit, ducimus animi optio culpa,
-          similique assumenda suscipit quos?
-        </p>
+        <div class="about-us__header">
+          <h2 class="title-section" id="about_us">Sobre Mí</h2>
+          <p class="text-section">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+            esse dolorum illum magnam, velit unde animi. Libero expedita natus
+            voluptatem velit. Quae magnam ut dolorum. Sint unde nobis ullam ab.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
+            minus consectetur rem a dolorem vero deleniti repudiandae eaque
+            corrupti perferendis mollitia sit, ducimus animi optio culpa,
+            similique assumenda suscipit quos?
+          </p>
+        </div>
+        <footer class="about-us__footer">
+          <ul>
+            <li><img height="40px" width="40px" src="assets/icons/instagram.png" alt=""><a href="#">Instragram</a></li>
+            <li><img height="40px" width="40px" src="assets/icons/youtube.png" alt=""><a href="#">Youtube</a></li>
+          </ul>
+        </footer>
       </section>
     </div>
   </body>
