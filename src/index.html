@@ -15,17 +15,29 @@
   <body>
     <div class="main">
       <header class="header">
-        <ul class="header-menu">
-          <li class="header-menu__item"><a href="#">HOME</a></li>
-          <li class="header-menu__item"><a href="#">ABOUT</a></li>
-          <li class="header-menu__item"><a href="#">PORTAFOLIO</a></li>
-          <li class="header-menu__item__img">
-            <img src="./assets/images/log.png" alt="logo" />
-          </li>
-          <li class="header-menu__item"><a href="#">BLOG</a></li>
-          <li class="header-menu__item"><a href="#">CATEGORIAS</a></li>
-          <li class="header-menu__item"><a href="#about_us">CONTACTO</a></li>
-        </ul>
+        <div class="header-desktop">
+          <ul class="header-menu">
+            <li class="header-menu__item"><a href="#">HOME</a></li>
+            <li class="header-menu__item"><a href="#">ABOUT</a></li>
+            <li class="header-menu__item"><a href="#">PORTAFOLIO</a></li>
+            <li class="header-menu__item__img">
+              <img src="./assets/images/log.png" alt="logo" />
+            </li>
+            <li class="header-menu__item"><a href="#">BLOG</a></li>
+            <li class="header-menu__item"><a href="#">CATEGORIAS</a></li>
+            <li class="header-menu__item"><a href="#about_us">CONTACTO</a></li>
+          </ul>
+        </div>
+        <div class="header-mobile">
+          <div class="header-mobile__container">
+            <div class="header-mobile__menu">
+              <img src="assets/icons/menu.png" alt="menu-icon">
+            </div>
+            <div class="header-mobile__logo">
+              <img src="assets/images/log.png" alt="logo">
+            </div>
+          </div>
+        </div>
       </header>
       <section class="group-video">
         <h2 class="title-section">Producciones Audiovisuales</h2>
@@ -42,6 +54,7 @@
           <div class="video_item">
             <iframe
               width="100%"
+              loading="lazy"
               height="100%"
               src="https://www.youtube.com/embed/KNkiHqbuCGI?controls=0"
               title="YouTube video player"
@@ -53,6 +66,7 @@
           <div class="video_item">
             <iframe
               width="100%"
+              loading="lazy"
               height="100%"
               src="https://www.youtube.com/embed/P8ldzQ1ETrE?controls=0"
               title="YouTube video player"
@@ -64,6 +78,7 @@
           <div class="video_item">
             <iframe
               width="100%"
+              loading="lazy"
               height="100%"
               src="https://www.youtube.com/embed/NnddojF_HFo?controls=0"
               title="YouTube video player"
@@ -93,8 +108,7 @@
             alt="image1"
           />
           <img
-
-            
+            loading="lazy"
             class="group-photos__container__item"
             src="./assets/album/image2.jpg"
             alt="image2"
@@ -157,7 +171,7 @@
             <video
               src="./assets/video/video.mp4"
               loop
-              width="400px"
+              width="100%"
               autoplay
               muted
             ></video>
