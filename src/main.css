@@ -66,6 +66,19 @@ section {
   text-transform: uppercase;
   font-size: 2rem;
 }
+
+.group-video__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  gap: 10px;
+}
+.video_item {
+  height: 320px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
 .group-photos {
   padding-top: 0;
 }
