@@ -9,10 +9,11 @@ body {
 .header-desktop {
   display: none;
   height: 600px;
-  background: url("./assets/images/header3.jpg");
+  background: url("./assets/album/image7.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   /* background-attachment: fixed; */
-  background-position: center top;
+  background-position: center -200px;
   border-radius: 0 0 3px 3px;
 }
 .header-mobile {
