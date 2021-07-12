@@ -114,7 +114,6 @@ section {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  /* filter: invert(1); */
 }
 
 .title-section {
@@ -150,12 +149,12 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 3px;
-  transition: 0.4s;
+  /* transition: 0.4s; */
 }
-
+/* 
 .group-photos__container__item:hover {
   transform: scale(1.05);
-}
+} */
 
 .quality-container__video {
   display: none;
