@@ -1,0 +1,11 @@
+.group-video__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  justify-content: center;
+  gap: 10px;
+}
+.video_item {
+  height: 550px;
+  border-radius: 3px;
+  overflow: hidden;
+}

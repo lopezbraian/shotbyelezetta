@@ -10,17 +10,28 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet"> 
     <title>Elezzeta</title>
   </head>
   <body>
     <div class="main" id="main">
       <!-- <header class="header">
         <div class="header-desktop">
+          <div class="header-menu__image">
+            <img src="./assets/logo/logo.png" alt="logo" />
+          </div>
+          <h1><span>#</span>shotbyelezzeta</h1>
           <ul class="header-menu">
-            <li class="header-menu__item__img"><img src="./assets/logo/logo.png" alt="logo" /></li>
-            <li class="header-menu__item"><a href="#">SOBRE MÍ</a></li>
-            <li class="header-menu__item"><a href="#">VIDEOCLIPS</a></li>
-            <li class="header-menu__item"><a href="#">CONTACTO</a></li>
+            <li class="header-menu__item">
+              <a href="#photos"
+                ><img src="assets/icons/camera.png" alt="video-icon"
+              /></a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#videos"
+                ><img src="assets/icons/video-camera.png" alt="image-icon"
+              /></a>
+            </li>
           </ul>
         </div>
         <div class="header-mobile">
@@ -34,7 +45,7 @@
           </div>
         </div>
       </header>
-      <section class="group-video">
+      <section id="videos" class="group-video">
         <h2 class="title-section">Producciones Audiovisuales</h2>
         <p class="text-section">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
@@ -45,10 +56,96 @@
           corrupti perferendis mollitia sit, ducimus animi optio culpa,
           similique assumenda suscipit quos?
         </p>
-        
+        <div class="group-video__container">
+          <div class="video_item">
+            <iframe
+              width="100%"
+              loading="lazy"
+              height="100%"
+              src="https://www.youtube.com/embed/KNkiHqbuCGI?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video_item">
+            <iframe
+              width="100%"
+              loading="lazy"
+              height="100%"
+              src="https://www.youtube.com/embed/P8ldzQ1ETrE?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video_item">
+            <iframe
+              width="100%"
+              loading="lazy"
+              height="100%"
+              src="https://www.youtube.com/embed/NnddojF_HFo?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </section>
-      
-      <section class="quality">
+      <section id="photos" class="group-photos">
+        <h2 class="title-section">Capturando Momentos</h2>
+        <p class="text-section">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+          esse dolorum illum magnam, velit unde animi. Libero expedita natus
+          voluptatem velit. Quae magnam ut dolorum. Sint unde nobis ullam ab.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
+          minus consectetur rem a dolorem vero deleniti repudiandae eaque
+          corrupti perferendis mollitia sit, ducimus animi optio culpa,
+          similique assumenda suscipit quos?
+        </p>
+        <div class="group-photos__container">
+          <img
+            loading="lazy"
+            class="group-photos__container__item"
+            src="./assets/album/image1.jpg"
+            alt="image1"
+          />
+          <img
+            loading="lazy"
+            class="group-photos__container__item"
+            src="./assets/album/image11.jpg"
+            alt="image2"
+          />
+          <img
+            loading="lazy"
+            class="group-photos__container__item"
+            src="./assets/album/image3.jpg"
+            alt="image3"
+          />
+          <img
+            loading="lazy"
+            class="group-photos__container__item"
+            src="./assets/album/image4.jpg"
+            alt="image4"
+          />
+          <img
+            loading="lazy"
+            class="group-photos__container__item"
+            src="./assets/album/image9.jpg"
+            alt="image5"
+          />
+          <img
+            loading="lazy"
+            class="group-photos__container__item"
+            src="./assets/album/image6.jpg"
+            alt="image6"
+          />
+        </div>
+      </section>
+      <section id="quality" class="quality">
         <h2 class="title-section">
           Usando las mejores tecnologías del mercado
         </h2>
@@ -120,7 +217,7 @@
           </div>
         </div>
       </section>
-      <section class="about-us">
+      <section id="about-us" class="about-us">
         <div class="about-us__header">
           <h2 class="title-section" id="about_us">Sobre Mí</h2>
           <p class="text-section">
@@ -155,6 +252,5 @@
         </footer>
       </section> -->
     </div>
-    <div id="modal"></div>
   </body>
 </html>

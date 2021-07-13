@@ -11,12 +11,19 @@ module.exports = {
   },
   devServer: {
     open: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
       },
       {
         test: /\.png|.jpg|.mp4/,
