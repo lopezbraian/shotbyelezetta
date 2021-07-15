@@ -6,11 +6,9 @@ import TitleSection from "../../components/TitleSection";
 import "./index.css";
 
 export default function Home({ data }) {
-  const [src, setSrc] = useState("");
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
-  const onClickPicture = (index) => {
-    setSrc(data[index]);
-  };
   return (
     <section className="group-photos">
       <TitleSection text={"Capturando Momentos"} />
@@ -26,13 +24,14 @@ export default function Home({ data }) {
       `}
       />
       <div className="group-photos__container">
-        <Modal setSrc={setSrc}>
-          {src === "" ? false : <img src={src} alt="main" />}
-        </Modal>
+        <Modal data={data} open={open} setOpen={setOpen} indexDefault={index} />
         {data.map((v, index) => {
           return (
             <img
-              onClick={() => onClickPicture(index)}
+              onClick={() => {
+                setOpen(true);
+                setIndex(index);
+              }}
               loading="lazy"
               className="group-photos__container__item"
               src={v}

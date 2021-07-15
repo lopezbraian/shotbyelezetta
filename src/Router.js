@@ -5,14 +5,14 @@ import Layout from "./layout";
 import Home from "./page/Home";
 import Video from "./page/Video";
 
-import photo2 from "./assets/album/image3.jpg";
-import photo1 from "./assets/album/image1.jpg";
 import photo3 from "./assets/album/image4.jpg";
+import photo1 from "./assets/album/image1.jpg";
+import photo2 from "./assets/album/image3.jpg";
 import photo4 from "./assets/album/image6.jpg";
 import photo5 from "./assets/album/image9.jpg";
 import photo6 from "./assets/album/image11.jpg";
 
-const images = [photo1, photo2, photo3, photo4, photo5, photo6];
+const images = [photo2, photo1, photo3, photo4, photo5, photo6];
 
 export default function MyRouter() {
   return (
