@@ -18,10 +18,6 @@ export default function About() {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
           esse dolorum illum magnam, velit unde animi. Libero expedita natus
           voluptatem velit. Quae magnam ut dolorum. Sint unde nobis ullam ab.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-          minus consectetur rem a dolorem vero deleniti repudiandae eaque
-          corrupti perferendis mollitia sit, ducimus animi optio culpa,
-          similique assumenda suscipit quos?
         </p>
       </section>
 
@@ -32,11 +28,6 @@ export default function About() {
         <p className="text-section">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
           esse dolorum illum magnam, velit unde animi. Libero expedita natus
-          voluptatem velit. Quae magnam ut dolorum. Sint unde nobis ullam ab.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-          minus consectetur rem a dolorem vero deleniti repudiandae eaque
-          corrupti perferendis mollitia sit, ducimus animi optio culpa,
-          similique assumenda suscipit quos?
         </p>
         <div className="quality-container">
           <div className="quality-container__video">
