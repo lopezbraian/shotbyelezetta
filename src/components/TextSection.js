@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react'
 
 export default function TextSection({ text }) {
-  return <p className="text-section">{text}</p>;
+  return <p className="text-section">{text}</p>
 }

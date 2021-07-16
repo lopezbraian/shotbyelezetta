@@ -1,13 +1,13 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path')
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
-    assetModuleFilename: "images/[hash][ext][query]",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
   devServer: {
     open: true,
@@ -16,29 +16,33 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
       {
-        test: /\.png|.jpg|.mp4/,
-        type: "asset/resource",
+        test: /\.png|.jpg|.mp4|.svg/,
+        type: 'asset/resource',
       },
       {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {},
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {},
           },
         ],
@@ -47,11 +51,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src/index.html"),
+      template: path.resolve(__dirname, 'public/index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: "[name]-styles.css",
-      chunkFilename: "[id].css",
+      filename: '[name]-styles.css',
+      chunkFilename: '[id].css',
     }),
   ],
-};
+}

@@ -1,10 +1,9 @@
 .header-desktop {
   display: none;
   height: 600px;
-  background: url("../assets/album/image1.jpg");
+  background: url("../../assets/images/image_header.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center -200px;
+  background-position: center;
 
 }
 .header-mobile {
@@ -54,7 +53,6 @@
   list-style: none;
   font-weight: 400;
   border-bottom: 1px solid transparent;
-  border-top: 1px solid transparent;
   transition: 0.3s;
 }
 .header-menu__item__img  img {
@@ -71,12 +69,9 @@
 .header-menu__item__img:hover {
   filter: invert(1);
 }
-section {
-  padding: 10px;
-}
+
 .header-menu__item:hover {
   border-bottom: 1px solid white;
-  border-top: 1px solid white;
 }
 
 @media screen and (min-width: 768px) {
