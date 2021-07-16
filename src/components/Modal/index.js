@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react'
-import './modal.css'
+import './index.css'
 
 export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
   if (!open) return ''
   const [src, setSrc] = useState('')
   const [index, setIndex] = useState(indexDefault)
-  const refModal = useRef(null)
 
   const updatePicture = (i) => {
     const lengthMax = data.length - 1
@@ -55,7 +54,7 @@ export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
   }, [index])
 
   return (
-    <div id="modal" ref={refModal}>
+    <div id="modal">
       <div className="contain-modal">
         <img src={src} alt="image"></img>
         <span className="close" onClick={close}>

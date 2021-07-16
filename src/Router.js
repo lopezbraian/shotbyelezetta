@@ -29,7 +29,6 @@ export default function MyRouter() {
           )}
         ></Route>
         <Route
-          exact
           path="/"
           render={(props) => (
             <Layout {...props}>

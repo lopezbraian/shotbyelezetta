@@ -1,0 +1,135 @@
+.header-desktop {
+  display: none;
+  height: 600px;
+  background: url('../../assets/images/image_header.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-menu {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 20px;
+}
+.header-menu > li {
+  list-style: none;
+}
+.header-menu__item > a {
+  color: white;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+.header-menu__item {
+  padding: 10px;
+  margin: 5px;
+  list-style: none;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+.header-menu__item__img img {
+  width: 100%;
+  border-radius: 50%;
+}
+.header-menu__item__img {
+  width: 60px;
+  margin: 10px auto;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.header-menu__item__img:hover {
+  filter: invert(1);
+}
+
+.header-menu__item:hover {
+  border-bottom: 1px solid white;
+}
+
+/* MOBILE */
+
+.header-mobile {
+  margin: 10px;
+  position: relative;
+}
+.header-mobile__menu {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.header-mobile__menu ul {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.header-mobile__close {
+  position: absolute;
+  right: 10%;
+  font-size: 4rem;
+}
+.header-mobile__menu a {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  font-size: 2rem;
+}
+.header-mobile__menu li {
+  list-style: none;
+}
+.header-mobile__container {
+  display: flex;
+  align-items: center;
+}
+.header-mobile__logo {
+  width: 100px;
+  margin: 10px auto;
+}
+.header-mobile__logo > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.header-mobile__icon {
+  width: 25px;
+}
+.header-mobile__icon > img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-mobile__menu {
+  animation-name: show;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+@keyframes show{
+  0% {
+   opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-desktop {
+    display: flex;
+  }
+  .header-mobile {
+    display: none;
+  }
+}

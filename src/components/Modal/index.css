@@ -16,17 +16,17 @@
   margin: auto;
   position: relative;
   display: block;
-  width: 80%;
+  width: 100%;
   height: 100%;
   max-width: 700px;
   animation-name: zoom;
   animation-duration: 0.1s;
 }
-.prev{
+.prev {
   cursor: pointer;
-  background: url("../assets/icons/next.png");
+  background: url('../../assets/icons/next.png');
   background-size: 100% 100%;
-  background-position: center center ;
+  background-position: center center;
   filter: invert(1);
   transform: rotate(-180deg);
   position: absolute;
@@ -36,11 +36,11 @@
   height: 35px;
   width: 35px;
 }
-.next{
+.next {
   cursor: pointer;
-  background: url("../assets/icons/next.png");
+  background: url('../../assets/icons/next.png');
   background-size: 100% 100%;
-  background-position: center center ;
+  background-position: center center;
   filter: invert(1);
   position: absolute;
   right: 0;
@@ -67,12 +67,14 @@
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  left: 0;
+  right: 0;
+  bottom: 60px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  text-align: center;
 }
 
 .close:hover,
@@ -80,4 +82,19 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .close {
+    left: auto;
+    right: auto;
+    top:auto;
+    bottom: auto;
+    right: 0;
+    top: 0;
+    position: absolute;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
 }

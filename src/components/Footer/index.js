@@ -20,7 +20,11 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          <a>
+          <a
+            href="https://api.whatsapp.com/send?phone=34690653624&text=Hola%20quisiera%20saber%20m%C3%A1s"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img height="40px" width="40px" src={whatsapp} alt="" />
           </a>
         </li>
