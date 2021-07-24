@@ -5,6 +5,7 @@ import Layout from './layout'
 import Home from './page/Home'
 import Video from './page/Video'
 import About from './page/About'
+import Photography from './page/Photography'
 
 export default function MyRouter() {
   return (
@@ -25,6 +26,15 @@ export default function MyRouter() {
           render={(props) => (
             <Layout {...props}>
               <About />
+            </Layout>
+          )}
+        ></Route>
+        <Route
+          exact
+          path="/photos/:category"
+          render={(props) => (
+            <Layout>
+              <Photography {...props} />
             </Layout>
           )}
         ></Route>

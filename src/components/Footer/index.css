@@ -24,4 +24,5 @@
 
 .footer img {
   cursor: pointer;
+  filter: invert(1);
 }

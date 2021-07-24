@@ -6,7 +6,7 @@ export default function Layout({ children, ...props }) {
   return (
     <>
       <Header />
-      {children}
+      {React.cloneElement(children, { ...props })}
       <Footer />
     </>
   )
