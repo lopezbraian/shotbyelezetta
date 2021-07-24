@@ -22,7 +22,7 @@ export default function Header() {
             <Link to="/videos">VIDEOCLIPS</Link>
           </li>
           <li className="header-menu__item">
-            <a href="#footer">CONTACTO</a>
+            <a href="https://billdu.me/elezetta-producciones">CONTACTO</a>
           </li>
         </ul>
       </div>

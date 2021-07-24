@@ -46,7 +46,7 @@ export default function HeaderMobile() {
               <Link to="/videos">VIDEOCLIPS</Link>
             </li>
             <li onClick={() => setOpenMenu(false)}>
-              <a href="#footer">CONTACTO</a>
+              <a href="https://billdu.me/elezetta-producciones">CONTACTO</a>
             </li>
           </ul>
         </animated.div>
