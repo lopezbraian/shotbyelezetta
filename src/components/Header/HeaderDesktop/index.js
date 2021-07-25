@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import Menu from '../../Menu'
+import Menu from "../../Menu";
 
-import './index.scss'
+import "./index.scss";
 
 export default function Header({ typeMenuMini, ...props }) {
-  const { category } = props.match.params || ''
-  console.log(category)
+  let category = props.match.params.category || "";
   const style = {
-    height: '250px',
-    background: 'black',
-  }
+    height: "250px",
+    background: "black",
+  };
   return (
     <header style={typeMenuMini ? style : {}} className="header-desktop">
       <div className="header-desktop__container">
@@ -19,17 +18,17 @@ export default function Header({ typeMenuMini, ...props }) {
       {category && (
         <h2
           style={{
-            textAlign: 'center',
-            textTransform: 'capitalize',
-            letterSpacing: '10px',
-            fontStyle: 'italic',
-            fontWeight: '400',
-            fontSize: '4rem',
+            textAlign: "center",
+            textTransform: "capitalize",
+            letterSpacing: "10px",
+            fontStyle: "italic",
+            fontWeight: "400",
+            fontSize: "4rem",
           }}
         >
           {category}
         </h2>
       )}
     </header>
-  )
+  );
 }

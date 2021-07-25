@@ -1,11 +1,11 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Layout from './layout'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Layout from "./layout";
 
-import Home from './page/Home'
-import Video from './page/Video'
-import About from './page/About'
-import Photography from './page/Photography'
+import Home from "./page/Home";
+import Video from "./page/Video";
+import About from "./page/About";
+import Photography from "./page/Photography";
 
 export default function MyRouter() {
   return (
@@ -14,9 +14,9 @@ export default function MyRouter() {
         <Route
           exact
           path="/videos"
-          render={() => (
-            <Layout>
-              <Video />
+          render={(props) => (
+            <Layout {...props}>
+              <Video {...props} />
             </Layout>
           )}
         ></Route>
@@ -25,7 +25,7 @@ export default function MyRouter() {
           path="/about"
           render={(props) => (
             <Layout {...props}>
-              <About />
+              <About {...props} />
             </Layout>
           )}
         ></Route>
@@ -42,11 +42,11 @@ export default function MyRouter() {
           path="/"
           render={(props) => (
             <Layout typeMenuMini={false} {...props}>
-              <Home />
+              <Home {...props} />
             </Layout>
           )}
         ></Route>
       </Switch>
     </Router>
-  )
+  );
 }
