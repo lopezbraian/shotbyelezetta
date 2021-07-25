@@ -5,7 +5,8 @@
   margin-top: 10px;
   display: grid;
   position: relative;
-  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 330px));
   grid-template-rows: auto;
   gap: 10px;
 }

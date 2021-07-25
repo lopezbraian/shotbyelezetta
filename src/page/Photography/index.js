@@ -2,22 +2,28 @@ import React, { useEffect, useState } from 'react'
 
 import Modal from '../../components/Modal'
 import './index.css'
+
 export default function Photography(props) {
   const { category } = props.match.params
   const [open, setOpen] = useState(false)
   const [index, setIndex] = useState(0)
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true)
+  console.log('render')
   useEffect(() => {
     if (category === 'urban') {
       import('../../imagesUrban').then(({ arrayUrban }) => {
         setImages(arrayUrban)
-        setLoading(false)
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000)
       })
     } else {
       import('../../imagesPortrait').then(({ arrayPortrait }) => {
         setImages(arrayPortrait)
-        setLoading(false)
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000)
       })
     }
   }, [category])
@@ -27,7 +33,7 @@ export default function Photography(props) {
       <div className="loading-bar">
         <div
           style={
-            loading ? { animation: 'loading', animationDuration: '2s' } : {}
+            loading ? { animation: 'loading', animationDuration: '1s' } : {}
           }
           className="loadig-bar-load"
         ></div>
@@ -48,7 +54,9 @@ export default function Photography(props) {
                     setOpen(true)
                     setIndex(index)
                   }}
-                  loading="lazy"
+                  // loading="lazy"
+                  width="340px"
+                  height="420px"
                   className="group-photos__container__item"
                   src={v}
                   key={index}
