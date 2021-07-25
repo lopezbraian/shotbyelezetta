@@ -51,3 +51,7 @@ body {
 .cniSon {
   color: white !important;
 }
+
+#billdu-widget-main-container {
+  opacity: 0;
+}

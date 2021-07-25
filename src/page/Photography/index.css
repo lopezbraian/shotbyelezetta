@@ -2,6 +2,7 @@
   padding-top: 0;
 }
 .group-photos__container {
+  margin-top: 10px;
   display: grid;
   position: relative;
   grid-template-columns: repeat(3, auto);
@@ -14,4 +15,28 @@
   object-fit: cover;
   border-radius: 3px;
   cursor: pointer;
+}
+.loading-bar {
+  height: 10px;
+  position: relative;
+}
+.loadig-bar-load {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #f3f3f3;
+  left: 0;
+  right: 0;
+ 
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }

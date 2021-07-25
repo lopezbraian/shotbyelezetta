@@ -21,11 +21,11 @@ export default function Home() {
       `}
       />
       <div className="home-container">
-        <Link to="/photos/urban" className="home-category urban">
-          <p>Fotografia urbana</p>
-        </Link>
         <Link to="/photos/portrait" className="home-category portrait">
           <p>Fotografia retrato</p>
+        </Link>
+        <Link to="/photos/urban" className="home-category urban">
+          <p>Fotografia urbana</p>
         </Link>
       </div>
     </section>

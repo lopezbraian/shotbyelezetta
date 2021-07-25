@@ -2,11 +2,11 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-export default function Layout({ children, ...props }) {
+export default function Layout({ children, typeMenuMini, ...props }) {
   return (
     <>
-      <Header />
-      {React.cloneElement(children, { ...props })}
+      <Header typeMenuMini={typeMenuMini} {...props} />
+      {children}
       <Footer />
     </>
   )

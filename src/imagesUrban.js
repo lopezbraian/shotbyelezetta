@@ -5,10 +5,8 @@ import photo4 from './assets/album/image4.jpg'
 import photo5 from './assets/album/image5.jpg'
 import photo6 from './assets/album/image6.jpg'
 import photo7 from './assets/album/image7.jpg'
-import photo8 from './assets/album/image8.jpg'
 import photo9 from './assets/album/image9.jpg'
 import photo10 from './assets/album/image10.jpg'
-import photo11 from './assets/album/image11.jpg'
 import photo12 from './assets/album/image12.jpg'
 import photo13 from './assets/album/image13.jpg'
 import photo14 from './assets/album/image14.jpg'
@@ -25,10 +23,8 @@ export const arrayUrban = [
   photo5,
   photo6,
   photo7,
-  photo8,
   photo9,
   photo10,
-  photo11,
   photo12,
   photo13,
   photo14,

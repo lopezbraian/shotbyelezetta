@@ -33,7 +33,7 @@ export default function MyRouter() {
           exact
           path="/photos/:category"
           render={(props) => (
-            <Layout>
+            <Layout typeMenuMini={true} {...props}>
               <Photography {...props} />
             </Layout>
           )}
@@ -41,7 +41,7 @@ export default function MyRouter() {
         <Route
           path="/"
           render={(props) => (
-            <Layout {...props}>
+            <Layout typeMenuMini={false} {...props}>
               <Home />
             </Layout>
           )}
