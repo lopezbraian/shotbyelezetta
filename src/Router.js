@@ -41,8 +41,8 @@ export default function MyRouter() {
         <Route
           path="/"
           render={(props) => (
-            <Layout typeMenuMini={false} {...props}>
-              <Home {...props} />
+            <Layout>
+              <Home {...props} />{" "}
             </Layout>
           )}
         ></Route>

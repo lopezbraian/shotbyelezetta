@@ -1,10 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
 import "./index.css";
 
 export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
-  if (!open) return "";
+  console.log(indexDefault);
   const [src, setSrc] = useState("");
   const [index, setIndex] = useState(indexDefault);
 
@@ -35,7 +33,6 @@ export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
   }
 
   function pressButton(e) {
-    console.log(e.keyCode);
     if (e.keyCode === 39) {
       next();
     }
@@ -48,13 +45,15 @@ export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
   }
 
   useEffect(() => {
-    setSrc(data[index]);
+    setSrc(data[indexDefault]);
     document.body.addEventListener("keydown", pressButton);
     return () => {
       document.body.removeEventListener("keydown", pressButton);
     };
-  }, [index]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [indexDefault, data]);
 
+  if (!open) return "";
   return (
     <div id="modal">
       <div className="contain-modal">

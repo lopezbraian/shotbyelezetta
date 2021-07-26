@@ -5,9 +5,8 @@ import Menu from "../../Menu";
 import "./index.scss";
 
 export default function Header({ typeMenuMini, ...props }) {
-  let category = props.match.params.category || "";
   const style = {
-    height: "250px",
+    height: "100px",
     background: "black",
   };
   return (
@@ -15,20 +14,6 @@ export default function Header({ typeMenuMini, ...props }) {
       <div className="header-desktop__container">
         <Menu />
       </div>
-      {category && (
-        <h2
-          style={{
-            textAlign: "center",
-            textTransform: "capitalize",
-            letterSpacing: "10px",
-            fontStyle: "italic",
-            fontWeight: "400",
-            fontSize: "4rem",
-          }}
-        >
-          {category}
-        </h2>
-      )}
     </header>
   );
 }
