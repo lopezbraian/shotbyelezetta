@@ -3,7 +3,7 @@
 .group-photos__container {
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit , minmax(auto ,250px));
+  grid-template-columns: repeat(auto-fit , minmax(auto ,150px));
   justify-content: center;
   gap: 10px;
 }
@@ -36,9 +36,9 @@
   justify-content: center;
 }
 
-// @media screen and (min-width:768px) {
-//   .group-photos__container {
-//     grid-template-columns: repeat(3, minmax(auto, 330px));
-//   }
+@media screen and (min-width:376px) {
+  .group-photos__container {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
+  }
   
-// }
+}

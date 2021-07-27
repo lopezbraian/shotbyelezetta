@@ -16,26 +16,17 @@ export default function Home({ children }) {
   return (
     <section className="layout">
       <div
-        className="container-left-bar"
-        style={!visible ? { transform: "translate(-150px)" } : {}}
+        className={
+          visible
+            ? "container-left-bar"
+            : "container-left-bar container-left-bar--move"
+        }
       >
         <LeftBar />
-        <div
-          className="container-left-bar__button-hidde"
-          style={!visible ? { transform: "rotate(0deg)" } : {}}
-          onClick={click}
-        ></div>
+        <div className="container-left-bar__button-hidde" onClick={click}></div>
       </div>
       <div
-        className="layout__main"
-        style={
-          !visible
-            ? {
-                transform: "translate(-150px)",
-                width: "100vw",
-              }
-            : {}
-        }
+        className={visible ? `layout__main` : `layout__main layout__main--move`}
       >
         <Header />
         <div className="layout__main__content">{children}</div>

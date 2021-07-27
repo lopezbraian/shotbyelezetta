@@ -8,30 +8,51 @@
 .layout {
   background: url('../assets/images/home.jpg');
   background-size: cover;
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: 150px 1fr;
-  // background: #3D3C42;
   position: relative;
-  overflow: hidden;
+}
 
+.container-left-bar--move {
+  transform: translate(150px);
+}
+.container-left-bar{
+  position: absolute;
+  transition: transform .5s linear;
+  z-index: 1;
+  left: -150px;
+  background-color: #363739;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+}
+
+.container-left-bar__button-hidde {
+  position: absolute;
+  right: -25px;
+  top: calc(50% - 25px);
+  background: url('../assets/icons/next.png');
+  width: 25px;
+  background-size: cover;
+  height: 25px;
+  filter: invert(1);
+  transform: rotate(180deg);
+  transition: transform 1s ;
+  cursor: pointer;
 }
 
 .layout__main {
   height: 100vh;
-  width: calc(100vw - 150px);
   overflow: hidden;
-  display: grid;
-  grid-template-rows: 150px 1fr ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: transform .5s linear, width  .5s linear;
-  // transition: transform .5s linear;
-  overflow: hidden;
 }
 
 
 
 .layout__main__content {
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
   &::-webkit-scrollbar {
     width: 10px;
@@ -57,22 +78,55 @@
     border-radius: 10px;
   }
 }
-.container-left-bar{
-  position: relative;
-  transition: transform .5s linear;
-  z-index: 1;
-}
 
-.container-left-bar__button-hidde {
-  position: absolute;
-  right: -25px;
-  top: calc(50% - 25px);
-  background: url('../assets/icons/next.png');
-  width: 25px;
-  background-size: cover;
-  height: 25px;
-  filter: invert(1);
-  transform: rotate(180deg);
-  transition: transform 1s ;
-  cursor: pointer;
+
+
+@media screen and (min-width:769px) {
+  .layout {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 150px 1fr;
+    position: relative;
+  }
+  .container-left-bar{
+    position: relative;
+    transition: transform .5s linear;
+    background: transparent;
+    z-index: 1;
+    left:0;
+  }
+  .container-left-bar--move{
+    transform: translate(-150px);
+  }
+  .container-left-bar__button-hidde {
+    position: absolute;
+    right: -25px;
+    top: calc(50% - 25px);
+    background: url('../assets/icons/next.png');
+    width: 25px;
+    background-size: cover;
+    height: 25px;
+    filter: invert(1);
+    transform: rotate(0);
+    transition: transform 1s ;
+    cursor: pointer;
+  }
+
+  .container-left-bar__button-hidde--rotate {
+
+  }
+  .layout__main {
+    height: 100vh;
+    width: calc(100vw - 150px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .5s linear, width  .5s linear;
+  }
+  .layout__main--move{
+    transform: translate(-150px);
+    width: 100vw;
+  }
 }

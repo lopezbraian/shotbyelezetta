@@ -7,8 +7,6 @@ export default function Category({ image, linkto, text }) {
     <div
       style={{
         background: `url(${image})`,
-        height: "300px",
-        width: "300px",
         backgroundSize: "cover",
         textAlign: "center",
       }}
