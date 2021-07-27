@@ -1,64 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
-import imageLogo from "../assets/logo/logo-bg.png";
-import instagram from "../assets/icons/instagram.png";
-import youtube from "../assets/icons/youtube.png";
-import whatsapp from "../assets/icons/whatsapp.png";
-import SwitchCategoy from "../components/SwitchCategory";
+
+import LeftBar from "../components/LeftBar";
+import Header from "../components/Header";
 
 export default function Home({ children }) {
+  const [visible, setVisible] = useState(true);
+  const [moveLayout, setMoveLayout] = useState(false);
+  function click() {
+    setVisible(!visible);
+    setTimeout(() => {
+      setMoveLayout(!moveLayout);
+    }, 1500);
+  }
   return (
     <section className="layout">
-      <div className="layout__left">
-        <div className="left__image">
-          <img src={imageLogo} alt="logo-elezetta" />
-        </div>
-        <SwitchCategoy categories={["urbano", "retrato", "eventos"]} />
-        <div className="left__social">
-          <ul>
-            <li>
-              <a href="#instagra">
-                <img height="40px" width="40px" src={instagram} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#instagra">
-                <img height="40px" width="40px" src={youtube} alt="" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://api.whatsapp.com/send?phone=34690653624&text=Hola%20quisiera%20saber%20m%C3%A1s"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img height="40px" width="40px" src={whatsapp} alt="" />
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div
+        className="container-left-bar"
+        style={!visible ? { transform: "translate(-150px)" } : {}}
+      >
+        <LeftBar />
+        <div
+          className="container-left-bar__button-hidde"
+          style={!visible ? { transform: "rotate(0deg)" } : {}}
+          onClick={click}
+        ></div>
       </div>
-      <div className="layout__main">
-        <div className="layout__main__top">
-          <h1>Elezetta</h1>
-          <ul className="layout__main__menu">
-            <li>
-              <a href="#home">layout</a>
-            </li>
-            <li>
-              <a href="#products">Products</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#Loactions">Locations</a>
-            </li>
-            <li>
-              <a href="#cart">Cart</a>
-            </li>
-          </ul>
-        </div>
+      <div
+        className="layout__main"
+        style={
+          !visible
+            ? {
+                transform: "translate(-150px)",
+                width: "100vw",
+              }
+            : {}
+        }
+      >
+        <Header />
         <div className="layout__main__content">{children}</div>
       </div>
     </section>

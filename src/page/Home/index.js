@@ -14,12 +14,12 @@ export default function Home() {
           <Category
             image={imageCategoryUrban}
             text="Fotografias Urbana"
-            linkto="/photos/urban"
+            linkto="/photos/urbano"
           ></Category>
           <Category
             text="Fotografias Retrato"
             image={imageCategoryPortrait}
-            linkto="/photos/portrait"
+            linkto="/photos/retrato"
           ></Category>
         </div>
         <div className="home-container_right">

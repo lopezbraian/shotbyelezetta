@@ -1,0 +1,25 @@
+.menu-mobile {
+  margin: 0 auto;
+  padding: 0;
+  li {
+    margin: 5px;
+    list-style: none;
+    a {
+      text-transform: capitalize;
+      font-style: italic;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    border-bottom: 1px solid transparent;
+    padding: 5px 0;
+    
+  }
+  li:first-child {
+    color : #DBC18D;
+    border-bottom: 1px solid #DBC18D;
+  }
+  li:hover {
+    color : #DBC18D;
+    border-bottom: 1px solid #DBC18D;
+  }
+}

@@ -14,94 +14,65 @@
   grid-template-columns: 150px 1fr;
   // background: #3D3C42;
   position: relative;
-}
-.layout__left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.51);
+  overflow: hidden;
+
 }
 
-.left__image {
-  width: 100%;
-  height: 150px;
-  padding: 5px;
-  img {
-    width: 100%;
-    height: 100%;
-    filter: invert(1);
-  }
-}
-
-.left__social {
-  margin-bottom: 20px;
-  ul {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    margin: 10px;
-    list-style: none;
-  }
-  img {
-    filter: invert(1);
-  }
-}
 .layout__main {
+  height: 100vh;
+  width: calc(100vw - 150px);
+  overflow: hidden;
   display: grid;
   grid-template-rows: 150px 1fr ;
-}
-
-.layout__main__top {
-  height: 150px;
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-  h1 {
-    font-family: font_alex ;
-    font-size: 3rem;
-  }
+  transition: transform .5s linear, width  .5s linear;
+  // transition: transform .5s linear;
+  overflow: hidden;
 }
 
 
-
-.layout__main__menu{ 
-  margin: 0;
-  padding: 0;
-  display: flex;
-  li {
-    margin: 30px;
-    list-style: none;
-    a {
-      font-size: 1.3rem;
-      font-weight: 500;
-    }
-    border-bottom: 1px solid transparent;
-    padding: 20px 0;
-    
-  }
-  li:first-child {
-    color : #DBC18D;
-    border-bottom: 1px solid #DBC18D;
-  }
-  li:hover {
-    color : #DBC18D;
-    border-bottom: 1px solid #DBC18D;
-  }
-}
 
 .layout__main__content {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+  }
+}
+.container-left-bar{
+  position: relative;
+  transition: transform .5s linear;
+  z-index: 1;
 }
 
-
-.layout__main__content_left {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  gap :10px;
+.container-left-bar__button-hidde {
+  position: absolute;
+  right: -25px;
+  top: calc(50% - 25px);
+  background: url('../assets/icons/next.png');
+  width: 25px;
+  background-size: cover;
+  height: 25px;
+  filter: invert(1);
+  transform: rotate(180deg);
+  transition: transform 1s ;
+  cursor: pointer;
 }

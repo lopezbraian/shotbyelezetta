@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import Modal from "../../components/Modal";
+import Loading from "../../components/Loading";
+
 import "./index.scss";
 
 export default function Photography(props) {
@@ -26,7 +28,7 @@ export default function Photography(props) {
 
   return (
     <>
-      {!loading && (
+      {!loading ? (
         <div className="group-photos">
           <Modal
             data={images}
@@ -43,7 +45,7 @@ export default function Photography(props) {
                     setOpen(true);
                     setIndex(index);
                   }}
-                  // loading="lazy"
+                  loading="lazy"
                   width="340px"
                   height="420px"
                   className="group-photos__container__item"
@@ -54,6 +56,10 @@ export default function Photography(props) {
               );
             })}
           </div>
+        </div>
+      ) : (
+        <div className="wrap-loading">
+          <Loading />
         </div>
       )}
     </>

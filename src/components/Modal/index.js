@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./index.css";
+import "./index.scss";
+import close_button from "../../assets/icons/cancel.png";
 
 export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
   console.log(indexDefault);
@@ -59,7 +60,7 @@ export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
       <div className="contain-modal">
         <img src={src} alt="modal"></img>
         <span className="close" onClick={close}>
-          x
+          <img src={close_button} alt="close-button" />
         </span>
         <div className="next" onClick={next}></div>
         <div className="prev" onClick={prev}></div>

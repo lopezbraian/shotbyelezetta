@@ -1,3 +1,6 @@
+.switch-category-container {
+  display: none;
+}
 .switch-category-container__ul{
   margin: 0;
   padding: 0;
@@ -12,9 +15,15 @@
   text-transform: capitalize;
 }
 
-.switch-category-container__ul-li--active {
- 
+.switch-category-container__ul-li > a {
+  display: block;
+  width: 100%;
 }
 
+@media screen and (min-width:768px) {
+  .switch-category-container {
+    display: block;
+  }
+}
 
 
