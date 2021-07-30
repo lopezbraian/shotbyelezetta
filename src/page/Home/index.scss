@@ -1,10 +1,3 @@
-
-@font-face {
-  font-family: 'font_alex';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../../assets/fonts/font_alex.otf'); /* IE9 Compat Modes */
-}
 .home {
   height: 100%;
   display: flex;
@@ -18,7 +11,12 @@
   flex-direction: column-reverse;
   height: 100%;
 }
-
+.home__title-elezetta {
+  display: block;
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+}
 .home-container_right {
   margin-top: 20px;
 
@@ -78,15 +76,28 @@
     display: flex;
 
   }
+  .home__title-elezetta{
+    display: none;
+  }
   .home-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .home-container_left {
+    align-self: center;
   }
   .home__main__footer{
     display: grid;
   }
 }
-@media screen and (min-width:515px) {
+@media screen and (min-width:769px) {
+  .home-container{
+    h2{
+      font-size: 4rem;
+    }
+  }
+}
+@media screen and (min-width:1025px) {
   .home-container{
     h2{
       font-size: 5rem;

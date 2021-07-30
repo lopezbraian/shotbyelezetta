@@ -41,7 +41,7 @@ export default function MyRouter() {
         <Route
           path="/"
           render={(props) => (
-            <Layout>
+            <Layout {...props}>
               <Home {...props} />{" "}
             </Layout>
           )}

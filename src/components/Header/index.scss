@@ -5,10 +5,7 @@
   align-items: center;
   justify-content: space-between;
   
-  h1 {
-    font-family: font_alex ;
-    font-size: 3rem;
-  }
+  
 }
 .header__menu{ 
   margin: 0;
@@ -26,10 +23,7 @@
     padding: 20px 0;
     
   }
-  li:first-child {
-    color : #DBC18D;
-    border-bottom: 1px solid #DBC18D;
-  }
+
   li:hover {
     color : #DBC18D;
     border-bottom: 1px solid #DBC18D;

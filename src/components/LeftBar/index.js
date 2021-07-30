@@ -7,12 +7,15 @@ import imageLogo from "../../assets/logo/logo-bg.png";
 import MenuMobile from "../MenuMobile";
 
 import SwitchCategoy from "../SwitchCategory";
+import { Link } from "react-router-dom";
 export default function LeftBar() {
   return (
     <div className="left-bar">
-      <div className="left-bar__image">
-        <img src={imageLogo} alt="logo-elezetta" />
-      </div>
+      <Link to="/">
+        <div className="left-bar__image">
+          <img src={imageLogo} alt="logo-elezetta" />
+        </div>
+      </Link>
       <SwitchCategoy categories={["urbano", "retrato", "eventos"]} />
       <div className="left-bar__menu-mobile">
         <MenuMobile></MenuMobile>

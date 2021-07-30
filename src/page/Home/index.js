@@ -6,9 +6,11 @@ import imageCategoryUrban from "../../assets/album/image1.jpg";
 import imageCategoryPortrait from "../../assets/album/image53.jpg";
 import Tecnologies from "../../components/Tecnologies";
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props);
   return (
     <section className="home">
+      <h1 className="title-elezetta home__title-elezetta">Elezetta</h1>
       <div className="home-container">
         <div className="home-container_left">
           <Category

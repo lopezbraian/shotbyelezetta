@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'font_alex';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/font_alex.otf'); /* IE9 Compat Modes */
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -9,7 +14,12 @@ a  {
   cursor: pointer;
 }
 
-
+.title-elezetta {
+  
+  font-family: font_alex ;
+  font-size: 3rem;
+  text-align: center;
+}
 body {
   margin: 0;
   padding: 0;
