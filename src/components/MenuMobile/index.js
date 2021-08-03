@@ -9,13 +9,13 @@ export default function MenuMobile() {
         <Link to={"/fotos"}>Fotografias</Link>
       </li>
       <li>
-        <Link to={"/about"}>Videos</Link>
+        <Link to={"/videos"}>Videos</Link>
       </li>
       <li>
         <Link to={"/Loactions"}>Ubicación</Link>
       </li>
       <li>
-        <Link to={"/cart"}>Contacto</Link>
+        <Link to={"/about"}>Contacto</Link>
       </li>
     </ul>
   );
