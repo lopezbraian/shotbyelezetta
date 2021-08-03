@@ -13,11 +13,11 @@
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 1s linear;
+  transition: transform .2s linear;
   border: 2px solid transparent;
 }
 .group-photos__container__item:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
   border: 2px solid white;
 }
 
