@@ -6,6 +6,7 @@ import Home from "./page/Home";
 import Video from "./page/Video";
 import About from "./page/About";
 import Photography from "./page/Photography";
+import Photos from './page/Photo'
 
 export default function MyRouter() {
   return (
@@ -35,6 +36,15 @@ export default function MyRouter() {
           render={(props) => (
             <Layout typeMenuMini={true} {...props}>
               <Photography {...props} />
+            </Layout>
+          )}
+        ></Route>
+        <Route
+          exact
+          path="/photos"
+          render={(props) => (
+            <Layout typeMenuMini={true} {...props}>
+              <Photos {...props} />
             </Layout>
           )}
         ></Route>

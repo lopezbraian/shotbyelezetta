@@ -1,32 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import TextSection from "../../components/TextSection";
-import TitleSection from "../../components/TitleSection";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
+import ShowPhotos from "../../components/ShowPhotos";
+import Loading from "../../components/Loading";
 
 export default function Photo() {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let images = [];
+    import("../../imagesUrban").then(({ arrayUrban }) => {
+      images = arrayUrban;
+      import("../../imagesPortrait").then(({ arrayPortrait }) => {
+        images = [...images, ...arrayPortrait];
+        images = images.sort(() => Math.random() - 0.5);
+        setImages(images);
+        setLoading(false);
+      });
+    });
+  }, []);
   return (
-    <section className="home">
-      <TitleSection text={"Capturando Momentos"} />
-      <TextSection
-        text={`
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-        esse dolorum illum magnam, velit unde animi. Libero expedita natus
-        voluptatem velit. Quae magnam ut dolorum. Sint unde nobis ullam ab.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-        minus consectetur rem a dolorem vero deleniti repudiandae eaque corrupti
-        perferendis mollitia sit, ducimus animi optio culpa, similique assumenda
-        suscipit quos?
-      `}
-      />
-      <div className="home-container">
-        <Link to="/photos/portrait" className="home-category portrait">
-          <p>Fotografia retrato</p>
-        </Link>
-        <Link to="/photos/urban" className="home-category urban">
-          <p>Fotografia urbana</p>
-        </Link>
+    <div className="photo-container">
+      <div className="photo-container">
+        <h2 className="title-page">Colección de fotos</h2>
+        <>
+          {!loading ? (
+            <ShowPhotos data={images} />
+          ) : (
+            <div className="wrap-loading">
+              <Loading />
+            </div>
+          )}
+        </>
       </div>
-    </section>
+    </div>
   );
 }

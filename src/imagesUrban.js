@@ -14,6 +14,9 @@ import photo15 from './assets/album/image15.jpg'
 import photo16 from './assets/album/image16.jpg'
 import photo17 from './assets/album/image17.jpg'
 import photo18 from './assets/album/image18.jpg'
+import photo19 from './assets/album/image19.jpg'
+import photo20 from './assets/album/image20.jpg'
+import photo21 from './assets/album/image21.jpg'
 
 export const arrayUrban = [
   photo1,
@@ -32,4 +35,7 @@ export const arrayUrban = [
   photo16,
   photo17,
   photo18,
+  photo19,
+  photo20,
+  photo21,
 ]

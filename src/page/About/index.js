@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import video from '../../assets/video/video.mp4'
-import photo from '../../assets/logo/photoshop.png'
-import illus from '../../assets/logo/illustrator.png'
-import premier from '../../assets/logo/premier.png'
-import lightroom from '../../assets/logo/lightroom.png'
-import sony from '../../assets/logo/sony.png'
+import video from "../../assets/video/video.mp4";
+import photo from "../../assets/logo/photoshop.png";
+import illus from "../../assets/logo/illustrator.png";
+import premier from "../../assets/logo/premier.png";
+import lightroom from "../../assets/logo/lightroom.png";
+import sony from "../../assets/logo/sony.png";
 
-import './index.scss'
+import "./index.scss";
 
 export default function About() {
   return (
-    <section className="about-container">
+    <div className="about-container">
       <div className="container-text">
         <h2 className="title-section">
           Usando las mejores tecnologías del mercado
@@ -48,6 +48,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
-  )
+    </div>
+  );
 }

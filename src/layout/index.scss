@@ -10,112 +10,25 @@ $animation_duration: .2s;
   background: url('../assets/images/home.jpg');
   background-size: cover;
   position: relative;
-}
-
-.container-left-bar--move {
-  transform: translate(150px);
-}
-.container-left-bar{
-  position: absolute;
-  transition: transform $animation_duration linear;
-  z-index: 1;
-  left: -150px;
-  background-color: #363739;
-  top: 0;
-  bottom: 0;
-  width: 150px;
-}
-
-.container-left-bar__button-hidde {
-  position: absolute;
-  right: -25px;
-  top: calc(50% - 25px);
-  background: url('../assets/icons/next.png');
-  width: 25px;
-  background-size: cover;
-  height: 25px;
-  filter: invert(1);
-  transform: rotate(180deg);
-  cursor: pointer;
-}
-
-.layout__main {
   height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+.layout-container {
+  height: 100vh;
+  overflow-y: auto;
   transition: transform $animation_duration linear, width  $animation_duration linear;
 }
-.layout__main__content {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  &::-webkit-scrollbar-track {
-    background: rgb(179, 177, 177);
-    border-radius: 10px;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-    background: rgb(136, 136, 136);
-    border-radius: 10px;
-  }
-  
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgb(100, 100, 100);
-    border-radius: 10px;
-  }
-  
-  &::-webkit-scrollbar-thumb:active {
-    background: rgb(68, 68, 68);
-    border-radius: 10px;
-  }
-}
-
-
 
 @media screen and (min-width:769px) {
   .layout {
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    position: relative;
     grid-template-columns: 150px 1fr;
-    position: relative;
   }
-  .container-left-bar{
-    position: relative;
-    transition: transform $animation_duration linear;
-    background: transparent;
-    z-index: 1;
-    left:0;
-  }
-  .container-left-bar--move{
-    transform: translate(-150px);
-  }
-  .container-left-bar__button-hidde {
-    position: absolute;
-    right: -25px;
-    top: calc(50% - 25px);
-    background: url('../assets/icons/next.png');
-    width: 25px;
-    background-size: cover;
-    height: 25px;
-    filter: invert(1);
-    transform: rotate(0);
-    cursor: pointer;
-  }
-  .layout__main {
-    height: 100vh;
-    width: calc(100vw - 150px);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform $animation_duration linear, width  $animation_duration linear;
+  .layout-container {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    height: 100%;
+    width: 100%   ;
   }
   .layout__main--move{
     transform: translate(-150px);

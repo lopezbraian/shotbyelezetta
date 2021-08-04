@@ -1,0 +1,26 @@
+
+.group-photos__container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(auto ,150px));
+  justify-content: center;
+  gap: 10px;
+}
+.group-photos__container__item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform .2s linear;
+  border: 2px solid transparent;
+}
+.group-photos__container__item:hover {
+  transform: scale(1.01);
+  border: 2px solid #DBC18D;
+}
+@media screen and (min-width:769px) {
+  .group-photos__container {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
+  }
+  
+}

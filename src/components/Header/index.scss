@@ -4,8 +4,6 @@
   display: none;
   align-items: center;
   justify-content: space-between;
-  
-  
 }
 .header__menu{ 
   margin: 0;
@@ -15,13 +13,12 @@
     margin: 30px;
     list-style: none;
     a {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 500;
       text-transform: capitalize;
     }
     border-bottom: 1px solid transparent;
     padding: 20px 0;
-    
   }
 
   li:hover {

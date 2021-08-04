@@ -6,7 +6,7 @@ export default function MenuMobile() {
   return (
     <ul className="menu-mobile">
       <li>
-        <Link to={"/fotos"}>Fotografias</Link>
+        <Link to={"/photos"}>Fotografias</Link>
       </li>
       <li>
         <Link to={"/videos"}>Videos</Link>

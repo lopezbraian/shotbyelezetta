@@ -1,3 +1,31 @@
+$animation_duration: .2s;
+.container-left-bar{
+  position: absolute;
+  transition: transform $animation_duration linear;
+  z-index: 2;
+  background-color: #363739;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+}
+.container-left-bar--move {
+  transform: translate(-150px);
+}
+.container-left-bar-btn {
+  position: absolute;
+  right: -25px;
+  top: calc(50% - 25px);
+  background: url('../../assets/icons/next.png');
+  width: 25px;
+  background-size: cover;
+  height: 25px;
+  filter: invert(1);
+  cursor: pointer;
+  transform: rotate(180deg) ;
+}
+.button-inside {
+  transform: rotate(0deg);
+}
 .left-bar {
   width: 100%;
   height: 100%;
@@ -20,7 +48,11 @@ background: none;
     width: 100%;
     height: 100%;
     filter: invert(1);
+    transition: transform .5s linear;
   }
+}
+.left-bar__image:hover > img{ 
+  transform: scale(1.1);
 }
 
 
@@ -51,6 +83,12 @@ background: none;
 
 
 @media screen and (min-width:769px) {
+  .container-left-bar{
+    position: relative;
+  }
+  .container-left-bar-btn {
+    display: none;
+  }
   .left-bar__social {
     margin-bottom: 20px;
     ul {
@@ -71,6 +109,10 @@ background: none;
   }
   .left-bar__menu-mobile{
     display: none;
+  }
+ 
+  .container-left-bar--move{
+    transform: translate(-150px);
   }
   
 }

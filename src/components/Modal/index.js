@@ -3,7 +3,6 @@ import "./index.scss";
 import close_button from "../../assets/icons/cancel.png";
 
 export default function Modal({ data = [], open, setOpen, indexDefault = 0 }) {
-  console.log(indexDefault);
   const [src, setSrc] = useState("");
   const [index, setIndex] = useState(indexDefault);
 

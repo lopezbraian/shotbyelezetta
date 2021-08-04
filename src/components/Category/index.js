@@ -4,7 +4,8 @@ import "./index.scss";
 
 export default function Category({ image, linkto, text }) {
   return (
-    <div
+    <Link
+      to={linkto}
       style={{
         background: `url(${image})`,
         backgroundSize: "cover",
@@ -12,7 +13,7 @@ export default function Category({ image, linkto, text }) {
       }}
       className="category-container"
     >
-      <Link to={linkto}>{text}</Link>
-    </div>
+      {text}
+    </Link>
   );
 }

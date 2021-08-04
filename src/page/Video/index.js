@@ -1,14 +1,13 @@
-import React from 'react'
-import './index.css'
-import TitleSection from '../../components/TitleSection'
-import TextSection from '../../components/TextSection'
+import React from "react";
+import "./index.css";
+import TitleSection from "../../components/TitleSection";
+import TextSection from "../../components/TextSection";
 
 export default function Video({ data }) {
   return (
-    <section className="page_video-container">
+    <div className="video-container">
       <div className="container-text">
-
-        <TitleSection text={'Producciones Videoclips'} />
+        <TitleSection text={"Producciones Videoclips"} />
         <TextSection
           text={`
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
@@ -70,6 +69,6 @@ export default function Video({ data }) {
           ></iframe>
         </div>
       </div>
-    </section>
-  )
+    </div>
+  );
 }
