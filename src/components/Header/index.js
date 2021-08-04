@@ -6,7 +6,6 @@ import useGetPath from "../../hooks/useGetPath";
 
 export default function Header(props) {
   const active = useGetPath(props.location);
-  console.log(active);
   const activeStyle = {
     color: "#DBC18D",
     borderBottom: "1px solid #DBC18D",

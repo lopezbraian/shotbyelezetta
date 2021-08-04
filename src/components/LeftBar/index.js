@@ -9,42 +9,31 @@ import { Link } from "react-router-dom";
 import Social from "../Social";
 export default function LeftBar() {
   const [visible, setVisible] = useState(true);
-  const [moveLayout, setMoveLayout] = useState(false);
 
-  function click() {
-    setVisible(!visible);
-    setTimeout(() => {
-      setMoveLayout(!moveLayout);
-    }, 1500);
-  }
   return (
-    <>
-      <div
-        className={
-          visible
-            ? "container-left-bar"
-            : "container-left-bar container-left-bar--move"
-        }
-      >
-        <div className="left-bar">
-          <Link to="/">
-            <div className="left-bar__image">
-              <img src={imageLogo} alt="logo-elezetta" />
-            </div>
-          </Link>
-          <SwitchCategoy categories={["urbano", "retrato"]} />
-          <div className="left-bar__menu-mobile">
-            <MenuMobile></MenuMobile>
+    <div
+      className={
+        visible
+          ? "container-left-bar"
+          : "container-left-bar container-left-bar--move"
+      }
+    >
+      <div className="left-bar">
+        <Link to="/">
+          <div className="left-bar__image">
+            <img src={imageLogo} alt="logo-elezetta" />
           </div>
-          <Social />
+        </Link>
+        <SwitchCategoy categories={["urbano", "retrato"]} />
+        <div className="left-bar__menu-mobile">
+          <MenuMobile></MenuMobile>
         </div>
-        <div
-          className={`container-left-bar-btn ${
-            !visible ? "button-inside" : ""
-          } `}
-          onClick={click}
-        ></div>
+        <Social />
       </div>
-    </>
+      <div
+        className={`container-left-bar-btn ${!visible ? "button-inside" : ""} `}
+        onClick={() => setVisible(!visible)}
+      ></div>
+    </div>
   );
 }

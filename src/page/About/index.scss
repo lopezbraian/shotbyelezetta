@@ -32,6 +32,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.box-tec:last-child{
+  filter: invert(1);
+}
 .box-tec:first-child {
   margin-left: 0;
 }

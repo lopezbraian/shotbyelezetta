@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function useGetPath(location) {
   const { pathname } = location;
   const elementsPathName = pathname.split("/");
