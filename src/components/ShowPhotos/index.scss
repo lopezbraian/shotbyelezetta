@@ -1,8 +1,7 @@
 
 .group-photos__container {
-  padding: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit , minmax(auto ,150px));
+  grid-template-columns: repeat(auto-fill , minmax(50px ,150px));
   justify-content: center;
   gap: 10px;
 }
@@ -17,7 +16,7 @@
 }
 .group-photos__container__item:hover {
   transform: scale(1.01);
-  border: 2px solid #DBC18D;
+  border: 2px solid #f3f3f3;
 }
 @media screen and (min-width:769px) {
   .group-photos__container {
