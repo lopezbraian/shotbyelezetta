@@ -35,13 +35,8 @@ a  {
   font-size: 3rem;
   text-align: center;
 }
-p {
-  font-family: "Source Sans Pro", sans-serif;
-  letter-spacing: normal;
-}
 body {
-  font-family: 'font_alex','Times New Roman', Times, serif;
-  letter-spacing: 5px;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
   color: white;

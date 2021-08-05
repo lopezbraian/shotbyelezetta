@@ -12,6 +12,7 @@
   object-fit: cover;
   cursor: pointer;
   transition: transform .2s linear;
+  border-radius: 10px;
   border: 2px solid transparent;
 }
 .group-photos__container__item:hover {

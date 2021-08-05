@@ -12,6 +12,11 @@ export default function Layout({ children, ...props }) {
       <div className="layout-container">
         <Header {...props} />
         <section className="wrap-section">{children}</section>
+
+        <small style={{ textAlign: "right", padding: "0 5px" }}>
+          Elezzeta Productions {new Date().getFullYear()}. &#169; All rights
+          reserved
+        </small>
       </div>
     </section>
   );
