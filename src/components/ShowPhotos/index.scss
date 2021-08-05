@@ -1,7 +1,7 @@
 
 .group-photos__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(50px ,250px));
+  grid-template-columns: repeat(auto-fit , minmax(55px ,100px));
   justify-content: center;
   gap: 10px;
 }
@@ -17,4 +17,12 @@
 .group-photos__container__item:hover {
   transform: scale(1.01);
   border: 2px solid #f3f3f3;
+}
+@media screen and (min-width:769px) {
+  .group-photos__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(150px ,250px));
+    justify-content: center;
+    gap: 10px;
+  }
 }
