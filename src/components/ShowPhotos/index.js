@@ -17,8 +17,6 @@ export default function ShowPhotos({ data }) {
                 setOpen(true);
                 setIndex(index);
               }}
-              width="340px"
-              height="420px"
               className="group-photos__container__item"
               src={v}
               key={index}
