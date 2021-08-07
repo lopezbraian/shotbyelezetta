@@ -29,7 +29,9 @@ a  {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  font-style: italic;
 }
+
 
 .title-elezetta {
   font-family: font_alex ;
